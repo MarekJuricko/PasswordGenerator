@@ -5,10 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Password Generator</title>
 </head>
 <body>
     
+    <div id="mainBox">
+        <h1>Select properties for your password</h1>
+
+        <div id="form">
+            <form>
+                <input type="number" placeholder="Number of symbols" min="10" max="25" id="symbols">
+
+                <h2>
+                    <input type="checkbox" class="check" id="numbers"> Numbers
+                </h2>
+
+                <h2>
+                    <input type="checkbox" class="check" id="small"> Only small letters
+                </h2>
+
+                <h2>
+                    <input type="checkbox" class="check" id="specials"> Special symbols
+                </h2>
+
+                <input type="submit" value="Generate Password" id="generator">
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
