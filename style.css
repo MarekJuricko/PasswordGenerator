@@ -1,9 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    outline: px solid black;
 }
 
+/* body appearance */
 body{
     background-image: url(/9-15.5.2022/Password\ Generator/images/universe.jpg);
     background-size: cover;
@@ -27,6 +27,7 @@ body{
     padding: 25px;
 }
 
+/* form appearance */
 #form{
     padding: 5px;
     display: flex;
@@ -39,6 +40,7 @@ body{
     position: relative;
 }
 
+/* appearance of symbols input and generator button */
 #symbols,#generator{
     width: 180px;
     height: 30px;
@@ -71,6 +73,7 @@ body{
     accent-color: rgb(140, 0, 255);
 }
 
+/* additional appearance of generator button */
 #generator{
     width: 195px;
     height: 50px;
