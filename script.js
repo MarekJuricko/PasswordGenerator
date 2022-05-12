@@ -36,10 +36,16 @@ function generateSymbols(){
 function generatePass(){
     let length = Number(symbols.value)
 
+    if(length < 10){
+        length = 10
+    }else if(length > 25){
+        length = 25
+    }
+
     for(let i = 1; i < length + 1; i++){
         let sym = pass[Math.floor(Math.random() * pass.length)]
         password = password + sym
-    } 
+    }
     console.log(password)
 }
 
