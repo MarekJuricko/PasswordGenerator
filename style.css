@@ -21,10 +21,17 @@ body{
     border: 3px solid rgba(0, 255, 255, 0.75);
     border-radius: 25px;
     box-shadow: -5px -5px 200px rgb(0, 0, 170), 5px 5px 200px rgb(0, 0, 170);
+
+    position: absolute;
+
+    min-width: 600px;
+    min-height: 455px;
+
 }
 
 #mainBox>h1{
     padding: 25px;
+    text-align: center;
 }
 
 /* form appearance */
@@ -37,6 +44,10 @@ body{
 
 #symbols,#numbers,#small,#specials,#generator{
     margin: 10% 0%;
+}
+
+#final{
+    padding-top: 125px;
     position: relative;
 }
 
@@ -84,6 +95,10 @@ body{
     border-radius: 10px;
     color: aqua;
     font-weight: bold;
+
+    position: absolute;
+    top: 90%;
+    left: 32.5%;
 }
 
 #generator:hover{

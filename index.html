@@ -10,23 +10,28 @@
 <body>
     
     <div id="mainBox">
-        <h1>Select properties for your password</h1>
+        <h1 id="mainText">Select properties for your password</h1>
 
         <div id="form">
             <form>
-                <input type="number" placeholder="Number of symbols" min="10" max="25" id="symbols">
+                <div id="properties">
+                    <input type="number" placeholder="Number of symbols" min="10" max="25" id="symbols">
 
-                <h2>
-                    <input type="checkbox" class="check" id="numbers"> Numbers
-                </h2>
+                    <h2>
+                        <input type="checkbox" class="check" id="numbers"> Numbers
+                    </h2>
 
-                <h2>
-                    <input type="checkbox" class="check" id="small"> Only small letters
-                </h2>
+                    <h2>
+                        <input type="checkbox" class="check" id="small"> Only small letters
+                    </h2>
 
-                <h2>
-                    <input type="checkbox" class="check" id="specials"> Special symbols
-                </h2>
+                    <h2>
+                        <input type="checkbox" class="check" id="specials"> Special symbols
+                    </h2>
+                </div>
+
+                <div id="final">
+                </div>
 
                 <input type="submit" value="Generate Password" id="generator">
             </form>
