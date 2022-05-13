@@ -4,11 +4,15 @@ let smallA = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q
 let specialsA = [`!`,`@`,`#`,`$`,`%`,`^`,`&`,`*`,`?`]
 let pass = []
 let password = ""
+let finalPass = ""
 
+let mainText = document.querySelector("#mainText")
+let properties = document.querySelector("#properties")
 let symbols = document.querySelector("#symbols")
 let numbers = document.querySelector("#numbers")
 let small = document.querySelector("#small")
 let specials = document.querySelector("#specials")
+let final = document.querySelector("#final")
 let generator = document.querySelector("#generator")
 
 function push(pushed,pulled){
@@ -46,7 +50,17 @@ function generatePass(){
         let sym = pass[Math.floor(Math.random() * pass.length)]
         password = password + sym
     }
-    console.log(password)
+}
+
+function showPass(){
+    finalPass.innerHTML = ""
+    mainText.innerHTML = "Your new password is"
+    properties.style.display = "none"
+    
+
+    finalPass = document.createElement("h1")
+    finalPass.innerHTML = password
+    final.appendChild(finalPass)
 }
 
 generator.addEventListener("click",function(event){
@@ -54,4 +68,5 @@ generator.addEventListener("click",function(event){
     password = ""
     generateSymbols()
     generatePass()
+    showPass()
 })
