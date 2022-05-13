@@ -1,3 +1,4 @@
+//ARRAYS FOR PASSWORD
 let symbolsA  = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 let numbersA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 let smallA = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -6,6 +7,7 @@ let pass = []
 let password = ""
 let finalPass = ""
 
+//DECLARING PROPERTIES
 let mainText = document.querySelector("#mainText")
 let properties = document.querySelector("#properties")
 let symbols = document.querySelector("#symbols")
@@ -15,12 +17,14 @@ let specials = document.querySelector("#specials")
 let final = document.querySelector("#final")
 let generator = document.querySelector("#generator")
 
+//FUNCTION FOR PUSHING CHOSEN ARRAY
 function push(pushed,pulled){
     pulled.forEach(function(i){
         pushed.push(i)
     })
 }
 
+//FUNCTION FOR CREATING SUITABLE ARRAY
 function generateSymbols(){
     if(numbers.checked === true){
         push(pass,numbersA)
@@ -37,6 +41,7 @@ function generateSymbols(){
     }
 }
 
+//FUNCTION FOR CREATING RANDOM PASSWORD
 function generatePass(){
     let length = Number(symbols.value)
 
@@ -52,6 +57,7 @@ function generatePass(){
     }
 }
 
+//FUNCTION FOR SHOWING PASSWORD IN index.html FILE
 function showPass(){
     finalPass.innerHTML = ""
     mainText.innerHTML = "Your new password is"
@@ -63,6 +69,7 @@ function showPass(){
     final.appendChild(finalPass)
 }
 
+//EVENT LISTENER FOR GENERATE BUTTON
 generator.addEventListener("click",function(event){
     event.preventDefault()
     password = ""
